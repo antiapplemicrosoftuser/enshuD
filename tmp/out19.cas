@@ -1,0 +1,753 @@
+CASL	START	BEGIN	;
+BEGIN	LAD	GR6, 0
+	LAD	GR7, LIBBUF
+	LD	GR2, =1	; line 12
+	LD	GR3, =53	; line 12
+	ST	GR2, VAR, GR3	; line 12
+	LD	GR2, =1	; line 13
+	LD	GR3, =54	; line 13
+	ST	GR2, VAR, GR3	; line 13
+WHILE0	LD	GR3, =54	; line 14
+	LD	GR2, VAR, GR3	; line 14
+	LD	GR1, =11	; line 14
+	CPA	GR2, GR1	; line 14
+	JPL	ENDWH0	; line 14
+	PUSH	11111	; line 16
+	LD	GR3, =54	; line 16
+	LD	GR1, VAR, GR3	; line 16
+	POP		GR2	; line 16
+	LD	GR3, =42	; line 16
+	SUBA	GR1, =1	; line 16
+	ADDA	GR3, GR1	; line 16
+	ST	GR2, VAR, GR3	; line 16
+	LD	GR3, =54	; line 17
+	LD	GR2, VAR, GR3	; line 17
+	LD	GR1, =1	; line 17
+	ADDA	GR2, GR1	; line 17
+	LD	GR3, =54	; line 17
+	ST	GR2, VAR, GR3	; line 17
+	JUMP	WHILE0	; line 14
+ENDWH0	LD	GR2, =1	; line 20
+	LD	GR3, =0	; line 20
+	ST	GR2, VAR, GR3	; line 20
+WHILE2	LD	GR3, =0	; line 21
+	LD	GR2, VAR, GR3	; line 21
+	LD	GR1, =41	; line 21
+	CPA	GR2, GR1	; line 21
+	JPL	ENDWH2	; line 21
+	LD	GR3, =0	; line 23
+	LD	GR2, VAR, GR3	; line 23
+	LD	GR1, =21	; line 23
+	SUBA	GR2, GR1	; line 23
+	PUSH	0, 	GR2	; line 23
+	LD	GR3, =0	; line 23
+	LD	GR1, VAR, GR3	; line 23
+	LD	GR2, =21	; line 23
+	SUBA	GR1, GR2	; line 23
+	POP		GR2	; line 23
+	CALL	MULT	; line 23
+	LD	GR1, =180	; line 23
+	SUBA	GR2, GR1	; line 23
+	PUSH	0, 	GR2	; line 23
+	LD	GR3, =0	; line 23
+	LD	GR1, VAR, GR3	; line 23
+	POP		GR2	; line 23
+	LD	GR3, =1	; line 23
+	SUBA	GR1, =1	; line 23
+	ADDA	GR3, GR1	; line 23
+	ST	GR2, VAR, GR3	; line 23
+	LD	GR3, =0	; line 24
+	LD	GR2, VAR, GR3	; line 24
+	LD	GR3, =1	; line 24
+	SUBA	GR2, =1	; line 24
+	ADDA	GR3, GR2	; line 24
+	LD	GR2, VAR, GR3	; line 24
+	PUSH	0, 	GR2	; line 24
+	LD	GR3, =53	; line 24
+	LD	GR1, VAR, GR3	; line 24
+	POP		GR2	; line 24
+	CPA	GR2, GR1	; line 24
+	JPL	IF3	; line 24
+	JUMP	ENDIF3	; line 24
+IF3	PUSH	0, 	GR1	; line 26
+	LD	GR3, =0	; line 26
+	LD	GR2, VAR, GR3	; line 26
+	POP		GR1	; line 26
+	LD	GR3, =1	; line 26
+	SUBA	GR2, =1	; line 26
+	ADDA	GR3, GR2	; line 26
+	LD	GR2, VAR, GR3	; line 26
+	LD	GR3, =53	; line 26
+	ST	GR2, VAR, GR3	; line 26
+	JUMP	ENDEL3	; line 29
+ENDIF3	LD	GR3, =0	; line 30
+	LD	GR2, VAR, GR3	; line 30
+	LD	GR3, =1	; line 30
+	SUBA	GR2, =1	; line 30
+	ADDA	GR3, GR2	; line 30
+	LD	GR2, VAR, GR3	; line 30
+	XOR	GR2, =-1	; line 30
+	ADDA	GR2, =1	; line 30
+	PUSH	0, 	GR2	; line 30
+	LD	GR3, =53	; line 30
+	LD	GR1, VAR, GR3	; line 30
+	POP		GR2	; line 30
+	CPA	GR2, GR1	; line 30
+	JPL	IF4	; line 30
+	JUMP	ENDIF4	; line 30
+IF4	PUSH	0, 	GR1	; line 32
+	LD	GR3, =0	; line 32
+	LD	GR2, VAR, GR3	; line 32
+	POP		GR1	; line 32
+	LD	GR3, =1	; line 32
+	SUBA	GR2, =1	; line 32
+	ADDA	GR3, GR2	; line 32
+	LD	GR2, VAR, GR3	; line 32
+	XOR	GR2, =-1	; line 32
+	ADDA	GR2, =1	; line 32
+	LD	GR3, =53	; line 32
+	ST	GR2, VAR, GR3	; line 32
+ENDIF4	NOP
+ENDEL3	LD	GR3, =0	; line 35
+	LD	GR2, VAR, GR3	; line 35
+	LD	GR1, =1	; line 35
+	ADDA	GR2, GR1	; line 35
+	LD	GR3, =0	; line 35
+	ST	GR2, VAR, GR3	; line 35
+	JUMP	WHILE2	; line 21
+ENDWH2	LD	GR2, =1	; line 38
+	LD	GR3, =0	; line 38
+	ST	GR2, VAR, GR3	; line 38
+WHILE6	LD	GR3, =0	; line 39
+	LD	GR2, VAR, GR3	; line 39
+	LD	GR1, =41	; line 39
+	CPA	GR2, GR1	; line 39
+	JPL	ENDWH6	; line 39
+	PUSH	11110	; line 41
+	LD	GR3, =46	; line 41
+	POP		GR2	; line 41
+	ST	GR2, VAR, GR3	; line 41
+	LD	GR3, =0	; line 42
+	LD	GR2, VAR, GR3	; line 42
+	LD	GR3, =1	; line 42
+	SUBA	GR2, =1	; line 42
+	ADDA	GR3, GR2	; line 42
+	LD	GR2, VAR, GR3	; line 42
+	LD	GR1, =25	; line 42
+	CALL	MULT	; line 42
+	PUSH	0, 	GR2	; line 42
+	LD	GR3, =53	; line 42
+	LD	GR1, VAR, GR3	; line 42
+	LD	GR2, GR1	; line 42
+	POP		GR1	; line 42
+	CALL	DIV	; line 42
+	LD	GR1, =25	; line 42
+	ADDA	GR2, GR1	; line 42
+	LD	GR3, =55	; line 42
+	ST	GR2, VAR, GR3	; line 42
+	LD	GR3, =55	; line 43
+	LD	GR2, VAR, GR3	; line 43
+	LD	GR1, =5	; line 43
+	LD	GR0, GR2	; line 43
+	LD	GR2, GR1	; line 43
+	LD	GR1, GR0	; line 43
+	CALL	DIV	; line 43
+	LD	GR3, =56	; line 43
+	ST	GR2, VAR, GR3	; line 43
+	LD	GR3, =55	; line 44
+	LD	GR2, VAR, GR3	; line 44
+	PUSH	0, 	GR2	; line 44
+	LD	GR3, =56	; line 44
+	LD	GR1, VAR, GR3	; line 44
+	LD	GR2, =5	; line 44
+	CALL	MULT	; line 44
+	LD	GR1, GR2	; line 44
+	POP		GR2	; line 44
+	SUBA	GR2, GR1	; line 44
+	LD	GR3, =57	; line 44
+	ST	GR2, VAR, GR3	; line 44
+	LD	GR3, =56	; line 45
+	LD	GR2, VAR, GR3	; line 45
+	LD	GR1, =1	; line 45
+	ADDA	GR2, GR1	; line 45
+	LD	GR3, =56	; line 45
+	ST	GR2, VAR, GR3	; line 45
+	LD	GR3, =56	; line 46
+	LD	GR2, VAR, GR3	; line 46
+	LD	GR1, =5	; line 46
+	CPA	GR2, GR1	; line 46
+	JNZ	ENDIF7	; line 46
+	LD	GR3, =57	; line 48
+	LD	GR2, VAR, GR3	; line 48
+	LD	GR1, =0	; line 48
+	CPA	GR2, GR1	; line 48
+	JNZ	ENDIF8	; line 48
+	PUSH	31110	; line 50
+	LD	GR3, =56	; line 50
+	LD	GR1, VAR, GR3	; line 50
+	POP		GR2	; line 50
+	LD	GR3, =42	; line 50
+	SUBA	GR1, =1	; line 50
+	ADDA	GR3, GR1	; line 50
+	ST	GR2, VAR, GR3	; line 50
+	JUMP	ENDEL8	; line 53
+ENDIF8	LD	GR3, =57	; line 54
+	LD	GR2, VAR, GR3	; line 54
+	LD	GR1, =1	; line 54
+	CPA	GR2, GR1	; line 54
+	JNZ	ENDIF9	; line 54
+	PUSH	13110	; line 56
+	LD	GR3, =56	; line 56
+	LD	GR1, VAR, GR3	; line 56
+	POP		GR2	; line 56
+	LD	GR3, =42	; line 56
+	SUBA	GR1, =1	; line 56
+	ADDA	GR3, GR1	; line 56
+	ST	GR2, VAR, GR3	; line 56
+	JUMP	ENDEL9	; line 59
+ENDIF9	LD	GR3, =57	; line 60
+	LD	GR2, VAR, GR3	; line 60
+	LD	GR1, =2	; line 60
+	CPA	GR2, GR1	; line 60
+	JNZ	ENDIF10	; line 60
+	PUSH	11310	; line 62
+	LD	GR3, =56	; line 62
+	LD	GR1, VAR, GR3	; line 62
+	POP		GR2	; line 62
+	LD	GR3, =42	; line 62
+	SUBA	GR1, =1	; line 62
+	ADDA	GR3, GR1	; line 62
+	ST	GR2, VAR, GR3	; line 62
+	JUMP	ENDEL10	; line 65
+ENDIF10	LD	GR3, =57	; line 66
+	LD	GR2, VAR, GR3	; line 66
+	LD	GR1, =3	; line 66
+	CPA	GR2, GR1	; line 66
+	JNZ	ENDIF11	; line 66
+	PUSH	11130	; line 68
+	LD	GR3, =56	; line 68
+	LD	GR1, VAR, GR3	; line 68
+	POP		GR2	; line 68
+	LD	GR3, =42	; line 68
+	SUBA	GR1, =1	; line 68
+	ADDA	GR3, GR1	; line 68
+	ST	GR2, VAR, GR3	; line 68
+	JUMP	ENDEL11	; line 71
+ENDIF11	LD	GR3, =57	; line 72
+	LD	GR2, VAR, GR3	; line 72
+	LD	GR1, =4	; line 72
+	CPA	GR2, GR1	; line 72
+	JNZ	ENDIF12	; line 72
+	PUSH	11113	; line 74
+	LD	GR3, =56	; line 74
+	LD	GR1, VAR, GR3	; line 74
+	POP		GR2	; line 74
+	LD	GR3, =42	; line 74
+	SUBA	GR1, =1	; line 74
+	ADDA	GR3, GR1	; line 74
+	ST	GR2, VAR, GR3	; line 74
+ENDIF12	NOP
+ENDEL11	NOP
+ENDEL10	NOP
+ENDEL9	NOP
+ENDEL8	JUMP	ENDEL7	; line 82
+ENDIF7	LD	GR3, =57	; line 83
+	LD	GR2, VAR, GR3	; line 83
+	LD	GR1, =0	; line 83
+	CPA	GR2, GR1	; line 83
+	JNZ	ENDIF13	; line 83
+	PUSH	31111	; line 85
+	LD	GR3, =56	; line 85
+	LD	GR1, VAR, GR3	; line 85
+	POP		GR2	; line 85
+	LD	GR3, =42	; line 85
+	SUBA	GR1, =1	; line 85
+	ADDA	GR3, GR1	; line 85
+	ST	GR2, VAR, GR3	; line 85
+	JUMP	ENDEL13	; line 88
+ENDIF13	LD	GR3, =57	; line 89
+	LD	GR2, VAR, GR3	; line 89
+	LD	GR1, =1	; line 89
+	CPA	GR2, GR1	; line 89
+	JNZ	ENDIF14	; line 89
+	PUSH	13111	; line 91
+	LD	GR3, =56	; line 91
+	LD	GR1, VAR, GR3	; line 91
+	POP		GR2	; line 91
+	LD	GR3, =42	; line 91
+	SUBA	GR1, =1	; line 91
+	ADDA	GR3, GR1	; line 91
+	ST	GR2, VAR, GR3	; line 91
+	JUMP	ENDEL14	; line 94
+ENDIF14	LD	GR3, =57	; line 95
+	LD	GR2, VAR, GR3	; line 95
+	LD	GR1, =2	; line 95
+	CPA	GR2, GR1	; line 95
+	JNZ	ENDIF15	; line 95
+	PUSH	11311	; line 97
+	LD	GR3, =56	; line 97
+	LD	GR1, VAR, GR3	; line 97
+	POP		GR2	; line 97
+	LD	GR3, =42	; line 97
+	SUBA	GR1, =1	; line 97
+	ADDA	GR3, GR1	; line 97
+	ST	GR2, VAR, GR3	; line 97
+	JUMP	ENDEL15	; line 100
+ENDIF15	LD	GR3, =57	; line 101
+	LD	GR2, VAR, GR3	; line 101
+	LD	GR1, =3	; line 101
+	CPA	GR2, GR1	; line 101
+	JNZ	ENDIF16	; line 101
+	PUSH	11131	; line 103
+	LD	GR3, =56	; line 103
+	LD	GR1, VAR, GR3	; line 103
+	POP		GR2	; line 103
+	LD	GR3, =42	; line 103
+	SUBA	GR1, =1	; line 103
+	ADDA	GR3, GR1	; line 103
+	ST	GR2, VAR, GR3	; line 103
+	JUMP	ENDEL16	; line 106
+ENDIF16	LD	GR3, =57	; line 107
+	LD	GR2, VAR, GR3	; line 107
+	LD	GR1, =4	; line 107
+	CPA	GR2, GR1	; line 107
+	JNZ	ENDIF17	; line 107
+	PUSH	11113	; line 109
+	LD	GR3, =56	; line 109
+	LD	GR1, VAR, GR3	; line 109
+	POP		GR2	; line 109
+	LD	GR3, =42	; line 109
+	SUBA	GR1, =1	; line 109
+	ADDA	GR3, GR1	; line 109
+	ST	GR2, VAR, GR3	; line 109
+ENDIF17	NOP
+ENDEL16	NOP
+ENDEL15	NOP
+ENDEL14	NOP
+ENDEL13	NOP
+ENDEL7	LD	GR3, =42	; line 116
+	LD	GR2, VAR, GR3	; line 116
+	CALL	WRTINT	; line 117
+	LD	GR3, =43	; line 116
+	LD	GR2, VAR, GR3	; line 116
+	CALL	WRTINT	; line 117
+	LD	GR3, =44	; line 116
+	LD	GR2, VAR, GR3	; line 116
+	CALL	WRTINT	; line 117
+	LD	GR3, =45	; line 116
+	LD	GR2, VAR, GR3	; line 116
+	CALL	WRTINT	; line 117
+	LD	GR3, =46	; line 116
+	LD	GR2, VAR, GR3	; line 116
+	CALL	WRTINT	; line 117
+	LD	GR3, =47	; line 116
+	LD	GR2, VAR, GR3	; line 116
+	CALL	WRTINT	; line 117
+	LD	GR3, =48	; line 117
+	LD	GR2, VAR, GR3	; line 117
+	CALL	WRTINT	; line 117
+	LD	GR3, =49	; line 117
+	LD	GR2, VAR, GR3	; line 117
+	CALL	WRTINT	; line 117
+	LD	GR3, =50	; line 117
+	LD	GR2, VAR, GR3	; line 117
+	CALL	WRTINT	; line 117
+	LD	GR3, =51	; line 117
+	LD	GR2, VAR, GR3	; line 117
+	CALL	WRTINT	; line 117
+	LD	GR3, =52	; line 117
+	LD	GR2, VAR, GR3	; line 117
+	CALL	WRTINT	; line 117
+	LAD	GR2, CHAR0	; line 117
+	LD	GR1, =2	; line 117
+	CALL	WRTSTR	; line 117
+	LD	GR3, =0	; line 117
+	LD	GR2, VAR, GR3	; line 117
+	CALL	WRTINT	; line 117
+	CALL	WRTLN	; line 117
+	LD	GR3, =0	; line 118
+	LD	GR2, VAR, GR3	; line 118
+	LD	GR1, =1	; line 118
+	ADDA	GR2, GR1	; line 118
+	LD	GR3, =0	; line 118
+	ST	GR2, VAR, GR3	; line 118
+	PUSH	11111	; line 119
+	LD	GR3, =56	; line 119
+	LD	GR1, VAR, GR3	; line 119
+	POP		GR2	; line 119
+	LD	GR3, =42	; line 119
+	SUBA	GR1, =1	; line 119
+	ADDA	GR3, GR1	; line 119
+	ST	GR2, VAR, GR3	; line 119
+	JUMP	WHILE6	; line 39
+ENDWH6	RET
+CHAR0	DC	'  '
+VAR	DS	58
+LIBBUF	DS	256
+	END
+; lib.cas
+;============================================================
+; MULT: 掛け算を行うサブルーチン
+; GR1 * GR2 -> GR2
+MULT	START
+	PUSH	0,GR1	; GR1の内容をスタックに退避
+	PUSH	0,GR3	; GR3の内容をスタックに退避
+	PUSH	0,GR4	; GR4の内容をスタックに退避
+	LAD	GR3,0	; GR3を初期化
+	LD	GR4,GR2
+	JPL	LOOP
+	XOR	GR4,=#FFFF
+	ADDA	GR4,=1
+LOOP	SRL	GR4,1
+	JOV	ONE
+	JUMP	ZERO
+ONE	ADDL	GR3,GR1
+ZERO	SLL	GR1,1
+	AND	GR4,GR4
+	JNZ	LOOP
+	CPA	GR2,=0
+	JPL	END
+	XOR	GR3,=#FFFF
+	ADDA	GR3,=1
+END	LD	GR2,GR3
+	POP	GR4
+	POP	GR3
+	POP	GR1
+	RET
+	END
+;============================================================
+; DIV 割り算を行うサブルーチン
+; GR1 / GR2 -> 商は GR2, 余りは GR1
+DIV	START
+	PUSH	0,GR3
+	ST	GR1,A
+	ST	GR2,B
+	CPA	GR1,=0
+	JPL	SKIPA
+	XOR	GR1,=#FFFF
+	ADDA	GR1,=1
+SKIPA	CPA	GR2,=0
+	JZE	SKIPD
+	JPL	SKIPB
+	XOR	GR2,=#FFFF
+	ADDA	GR2,=1
+SKIPB	LD	GR3,=0
+LOOP	CPA	GR1,GR2
+	JMI	STEP
+	SUBA	GR1,GR2
+	LAD	GR3,1,GR3
+	JUMP	LOOP
+STEP	LD	GR2,GR3
+	LD	GR3,A
+	CPA	GR3,=0
+	JPL	SKIPC
+	XOR	GR1,=#FFFF
+	ADDA	GR1,=1
+SKIPC	XOR	GR3,B
+	CPA	GR3,=0
+	JZE	SKIPD
+	JPL	SKIPD
+	XOR	GR2,=#FFFF
+	ADDA	GR2,=1
+SKIPD	POP	GR3
+	RET
+A	DS	1
+B	DS	1
+	END
+;============================================================
+; 入力装置から数値データを読み込み，
+; その内容をGR2が指すアドレスに格納するサブルーチン
+RDINT	START
+	PUSH	0,GR1	; GR1の内容をスタックに退避
+	PUSH	0,GR3	; GR3の内容をスタックに退避
+	PUSH	0,GR4	; GR4の内容をスタックに退避
+	PUSH	0,GR5	; GR5の内容をスタックに退避
+	PUSH	0,GR6	; GR6の内容をスタックに退避
+	LD	GR5,GR2	; GR2が指す番地をGR5にコピー
+	LD	GR2,=0	; GR2を初期化
+	LD	GR3,=0	; GR3を初期化
+	IN	INAREA,INLEN	; 入力を受け取る
+	; 入力がnullかどうかのチェック
+	CPA	GR3,INLEN
+	JZE	ERROR
+	; 最初の文字が'-'かどうかのチェック
+	LD	GR4,INAREA,GR3
+	LAD	GR3,1,GR3
+	LD	GR6,GR4	; GR6に入力された先頭の文字を保存
+	CPL	GR4,=#002D	; '-'かどうか
+	JZE	LOOP
+	CPL	GR4,='0'	; 数値かどうかのチェック
+	JMI	ERROR
+	CPL	GR4,='9'
+	JPL	ERROR
+	XOR	GR4,=#0030	; 数値だったら変換
+	ADDA	GR2,GR4
+	; 「すでに読み込んだ数値を10倍して，新しく読み込んだ数値と足す」を繰り返す
+LOOP	CPA	GR3,INLEN
+	JZE	CODE	; 入力された文字数とGR3が同じであればループを抜ける
+	LD	GR1,=10
+	CALL	MULT	; GR2の値を10倍する
+	LD	GR4,INAREA,GR3
+	CPL	GR4,='0'	; 数値かどうかのチェック
+	JMI	ERROR
+	CPL	GR4,='9'
+	JPL	ERROR
+	XOR	GR4,=#0030	; GR4の内容を数値に変換
+	ADDA	GR2,GR4	; GR2にGR1の内容を足す
+	LAD	GR3,1,GR3	; GR3(ポインタ)をインクリメント
+	JUMP	LOOP
+	; 最初の文字が'-'であった場合は-1倍する
+CODE	CPL	GR6,=#002D
+	JNZ	END
+	XOR	GR2,=#FFFF
+	LAD	GR2,1,GR2
+	JUMP	END
+	; エラーを出力する
+ERROR	OUT	ERRSTR,ERRLEN
+END	ST	GR2,0,GR5	; GR2の内容をGR5が指す番地に格納する
+	LD	GR2,GR5	; GR5が指す番地をGR2に戻す
+	POP	GR6
+	POP	GR5
+	POP	GR4
+	POP	GR3
+	POP	GR1
+	RET
+ERRSTR	DC	'illegal input'
+ERRLEN	DC	13
+INAREA	DS	6
+INLEN	DS	1
+	END
+;============================================================
+; 入力装置から文字を読み込み，
+; その内容をGR2が指すアドレスに格納するサブルーチン
+RDCH	START
+	IN	INCHAR,INLEN
+	LD	GR1,INCHAR
+	ST	GR1,0,GR2
+	RET
+INCHAR	DS	1
+INLEN	DS	1
+	END
+;============================================================
+; 入力装置から，GR1の文字数を読み込む．
+; 読み込んだ文字列は，GR2 が指すアドレスから順に格納される
+RDSTR	START
+	PUSH	0,GR3	; GR3の内容をスタックに退避
+	PUSH	0,GR4	; GR4の内容をスタックに退避
+	PUSH	0,GR5	; GR5の内容をスタックに退避
+	LAD	GR4,0	; GR4を初期化
+	IN	INSTR,INLEN
+LOOP	CPA	GR4,GR1
+	JZE	END	; GR1で指定された文字数を超えたら終わり
+	CPA	GR4,INLEN
+	JZE	END	; 入力された文字数を超えたら終わり
+	LD	GR5,GR2
+	ADDA	GR5,GR4	; 文字の格納先番地を計算
+	LD	GR3,INSTR,GR4
+	ST	GR3,0,GR5
+	LAD	GR4,1,GR4
+	JUMP	LOOP
+END	POP	GR5
+	POP	GR4
+	POP	GR3
+	RET
+INSTR	DS	256
+INLEN	DS	1
+	END
+;============================================================
+; 入力装置からの文字列を改行まで読み飛ばすサブルーチン
+RDLN	START
+	IN	INAREA,INLEN
+	RET
+INAREA	DS	256
+INLEN	DS	1
+	END
+;============================================================
+; GR2の内容（数値データ）を出力装置に書き出すサブルーチン
+; このサブルーチンが呼ばれたとき，
+; GR7には，出力用番地の先頭アドレスが，
+; GR6には，現在出力用番地に入っている文字数が，
+; それぞれ格納されている．
+WRTINT	START
+	PUSH	0,GR1	; GR1の内容をスタックに退避
+	PUSH	0,GR2	; GR2の内容をスタックに退避
+	PUSH	0,GR3	; GR3の内容をスタックに退避
+	PUSH	0,GR2	; 数値データをもう一度スタックに退避
+	LD	GR3,=0	; GR3はインデックスとして用いる
+	; 数値データが負数である場合は，正の数に変換
+	CPA	GR2,=0
+	JPL	LOOP1
+	XOR	GR2,=#FFFF
+	ADDA	GR2,=1
+	; 数値データを変換しながら，バッファに格納
+LOOP1	LD	GR1,GR2
+	LD	GR2,=10
+	CALL	DIV
+	XOR	GR1,=#0030
+	ST	GR1,BUFFER,GR3
+	LAD	GR3,1,GR3
+	CPA	GR2,=0
+	JNZ	LOOP1
+	; 数値データが負数であれば，'-'を追加
+	POP	GR2
+	CPA	GR2,=0
+	JZE	LOOP2
+	JPL	LOOP2
+	LD	GR1,='-'
+	ST	GR1,BUFFER,GR3
+	LAD	GR3,1,GR3
+	; BUFFERを逆順にたどりながら，出力用バッファに格納
+LOOP2	LAD	GR3,-1,GR3
+	LD	GR1,BUFFER,GR3
+	LD	GR2,GR7
+	ADDA	GR2,GR6
+	ST	GR1,0,GR2
+	LAD	GR6,1,GR6
+	CPA	GR3,=0
+	JNZ	LOOP2
+END	POP	GR3
+	POP	GR2
+	POP	GR1
+	RET
+BUFFER	DS	6
+	END
+;============================================================
+; GR2の内容（文字）を出力装置に書き出すサブルーチン
+; このサブルーチンが呼ばれたとき，
+; GR7には，出力用番地の先頭アドレスが，
+; GR6には，現在出力用番地に入っている文字数が，
+; それぞれ格納されている．
+WRTCH	START
+	PUSH	0,GR1	; GR1の内容をスタックに退避
+	LD	GR1,GR7
+	ADDA	GR1,GR6	; GR1に次の文字を格納する番地を代入
+	ST	GR2,0,GR1
+	LAD	GR6,1,GR6
+	POP	GR1
+	RET
+	END
+;============================================================
+; [デバッグ未完了!!!!!!!!!!!!注意!!!!!!!!!!!!!!!!!!!!]
+; コンマを出力装置に書き出すサブルーチン
+; このサブルーチンが呼ばれたとき，
+; GR1とGR2を使用する。
+WRTCONM	START
+	PUSH	0,GR1
+	PUSH	0,GR2
+	PUSH	0,GR3	; GR3の内容をスタックに退避
+	PUSH	0,GR4	; GR4の内容をスタックに退避
+	PUSH	0,GR5	; GR5の内容をスタックに退避
+	LAD	GR3,0	; GR3は制御変数として用いる
+	LAD	GR2,CONM
+	LD	GR1,=2
+LOOP	CPA	GR3,GR1
+	JZE	END
+	LD	GR4,GR2
+	ADDA	GR4,GR3	; 出力する文字の格納番地を計算
+	LD	GR5,0,GR4	; 出力する文字をレジスタにコピー
+	LD	GR4,GR7
+	ADDA	GR4,GR6	; 出力先の番地を計算
+	ST	GR5,0,GR4	; 出力装置に書き出し
+	LAD	GR3,1,GR3
+	LAD	GR6,1,GR6
+	JUMP	LOOP
+END	POP	GR5
+	POP	GR4
+	POP	GR3
+	POP	GR2
+	POP	GR1
+	RET
+CONM	DC	', '
+	END
+;============================================================
+; [デバッグ未完了!!!!!!!!!!!!注意!!!!!!!!!!!!!!!!!!!!]
+; GR2の内容（boolean）を出力装置に書き出すサブルーチン
+; このサブルーチンが呼ばれたとき，
+; GR7には，出力用番地の先頭アドレスが，
+; GR6には，現在出力用番地に入っている文字数が，
+; それぞれ格納されている．
+WRTBOL	START
+	PUSH	0,GR1	; GR1の内容をスタックに退避
+	PUSH	0,GR3	; GR3の内容をスタックに退避
+	PUSH	0,GR4	; GR4の内容をスタックに退避
+	PUSH	0,GR5	; GR5の内容をスタックに退避
+	LAD	GR3,0	; GR3は制御変数として用いる
+	CPL	GR2,=0	; GR2がfalseか比較
+	JZE	FLSP
+	LAD	GR2,TREV
+	LD	GR1,=4
+	JUMP	LOOP
+FLSP	LAD	GR2,FLSV
+	LD	GR1,=5
+LOOP	CPA	GR3,GR1
+	JZE	END
+	LD	GR4,GR2
+	ADDA	GR4,GR3	; 出力する文字の格納番地を計算
+	LD	GR5,0,GR4	; 出力する文字をレジスタにコピー
+	LD	GR4,GR7
+	ADDA	GR4,GR6	; 出力先の番地を計算
+	ST	GR5,0,GR4	; 出力装置に書き出し
+	LAD	GR3,1,GR3
+	LAD	GR6,1,GR6
+	JUMP	LOOP
+END	POP	GR5
+	POP	GR4
+	POP	GR3
+	POP	GR1
+	RET
+FLSV	DC	'false'
+TREV	DC	'true'
+	END
+;============================================================
+; GR2の指すメモリ番地から，長さGR1の文字列を出力装置に書き出すサブルーチン
+; このサブルーチンが呼ばれたとき，
+; GR7には，出力用番地の先頭アドレスが，
+; GR6には，現在出力用番地に入っている文字数が，
+; それぞれ格納されている．
+WRTSTR	START
+	PUSH	0,GR3	; GR3の内容をスタックに退避
+	PUSH	0,GR4	; GR4の内容をスタックに退避
+	PUSH	0,GR5	; GR5の内容をスタックに退避
+	LAD	GR3,0	; GR3は制御変数として用いる
+LOOP	CPA	GR3,GR1
+	JZE	END
+	LD	GR4,GR2
+	ADDA	GR4,GR3	; 出力する文字の格納番地を計算
+	LD	GR5,0,GR4	; 出力する文字をレジスタにコピー
+	LD	GR4,GR7
+	ADDA	GR4,GR6	; 出力先の番地を計算
+	ST	GR5,0,GR4	; 出力装置に書き出し
+	LAD	GR3,1,GR3
+	LAD	GR6,1,GR6
+	JUMP	LOOP
+END	POP	GR5
+	POP	GR4
+	POP	GR3
+	RET
+	END
+;============================================================
+; 改行を出力装置に書き出すサブルーチン
+; 実質的には，GR7で始まるアドレス番地から長さGR6の文字列を出力する
+WRTLN	START
+	PUSH	0,GR1
+	PUSH	0,GR2
+	PUSH	0,GR3
+	ST	GR6,OUTLEN
+	LAD	GR1,0
+LOOP	CPA	GR1,OUTLEN
+	JZE	END
+	LD	GR2,GR7
+	ADDA	GR2,GR1
+	LD	GR3,0,GR2
+	ST	GR3,OUTSTR,GR1
+	LAD	GR1,1,GR1
+	JUMP	LOOP
+END	OUT	OUTSTR,OUTLEN
+	LAD	GR6,0	; 文字列を出力して，GR6を初期化
+	POP	GR3
+	POP	GR2
+	POP	GR1
+	RET
+OUTSTR	DS	256
+OUTLEN	DS	1
+	END
